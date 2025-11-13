@@ -12,7 +12,7 @@ public class PessoaFisica extends Pessoa{
             this.rg = rg;
             this.nomeMae = nomeMae;
     }
-       
+
     
     //Métodos Get e Set
     public long getCpf() {
