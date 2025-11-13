@@ -1,15 +1,15 @@
 public class Venda {
-
-    //Variáveis encapsuladas, privadas dentro da classe
+    
+    //Declaração de Variaveis encapsuladas, privadas dentro da classe.
     private long numeroNotaFiscal;
     private String dataVenda;
-    private float itensVenda;
-    private float valorTotal;
-
-    //Construtor para a classe produto
+    private Double itensVenda;
+    private Double valorTotal;
+    
+    //Construtor para a classe produto.
     Produto p = new Produto();
-
-    //Método Get e Set
+    
+    //Métodos Get e Set
     public long getNumeroNotaFiscal() {
         return numeroNotaFiscal;
     }
@@ -19,28 +19,30 @@ public class Venda {
     public String getDataVenda() {
         return dataVenda;
     }
-    public void setDataVenda(String dataVenda) {
+    public void setDateVenda(String dataVenda) {
         this.dataVenda = dataVenda;
     }
-    public float getItensVenda() {
+    public Double getItensVenda() {
         return itensVenda;
     }
-    public void setItensVenda(float itensVenda) {
+    public void setItensVenda(Double itensVenda) {
         this.itensVenda = itensVenda;
     }
-    public float getValorTotal() {
+    public Double getValorTotal() {
         return valorTotal;
     }
-    public void setValorTotal(float valorTotal) {
+    public void setValorTotal(Double valorTotal) {
         this.valorTotal = valorTotal;
     }
-
-    public valorVendaTotalItem(){    
-        for(int i = 0; i <= p.valorCompraItem(); i++){
-        return (p.valorCompraItem()+i);
+    
+    public Double CalcularValorTotal(){
+        valorTotal = itensVenda * p.valorCompraItem();
+        return valorTotal;
+    }
+    @Override
+    public String toString() {
+        return "Venda [numeroNotaFiscal=" + numeroNotaFiscal + ", dataVenda=" + dataVenda + ", itensVenda=" + itensVenda
+                + ", valorTotal=" + valorTotal + ", p=" + p + "]";
     }
     
-    }
 }
-    
-

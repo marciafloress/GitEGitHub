@@ -1,10 +1,20 @@
-public class PessoaJuridica extends Pessoa {
+public class PessoaJuridica extends Pessoa{
     
-    //Veriáveis protegidas devido a herança
+    //Declaração de Variaveis encapsuladas, protegidas.
     protected long cnpj;
     protected long inscricaoEstadual;
     protected String nomeFantasia;
     protected long razaoSocial;
+
+    public PessoaJuridica(String nome, int idade, String cidade, String estado, String bairro, long telefone,
+                String email, long cnpj, long inscricaoEstadual, String nomeFantasia, long razaoSocial) {
+            super(nome, idade, cidade, estado, bairro, telefone, email);
+            this.cnpj = cnpj;
+            this.inscricaoEstadual = inscricaoEstadual;
+            this.nomeFantasia = nomeFantasia;
+            this.razaoSocial = razaoSocial;
+            
+    }
 
     //Métodos Get e Set
     public long getCnpj() {
@@ -30,7 +40,15 @@ public class PessoaJuridica extends Pessoa {
     }
     public void setRazaoSocial(long razaoSocial) {
         this.razaoSocial = razaoSocial;
-    }  
+    }
 
+    @Override
+    public String toString() {
+        return "PessoaJuridica [cnpj=" + cnpj + ", inscricaoEstadual=" + inscricaoEstadual + ", nomeFantasia="
+                + nomeFantasia + ", razaoSocial=" + razaoSocial + ", getNome()=" + getNome() + ", getCnpj()="
+                + getCnpj() + ", getCidade()=" + getCidade() + ", getEstado()=" + getEstado() + ", getNomeFantasia()="
+                + getNomeFantasia() + ", getBairro()=" + getBairro() + ", getRazaoSocial()=" + getRazaoSocial()
+                + ", getTelefone()=" + getTelefone() + ", getEmail()=" + getEmail() + "]";
+    }
     
 }

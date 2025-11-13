@@ -1,6 +1,6 @@
 public class Pessoa {
 
-    //Variáveis Declaradas e encapsuladas como privada
+    //Declaração de Variaveis encapsuladas, privadas.
     private String nome;
     private int idade;
     private String cidade;
@@ -8,7 +8,18 @@ public class Pessoa {
     private String bairro;
     private long telefone;
     private String email;
-
+    
+    
+    public Pessoa(String nome, int idade, String cidade, String estado, String bairro, long telefone, String email) {
+        this.nome = nome;
+        this.idade = idade;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.bairro = bairro;
+        this.telefone = telefone;
+        this.email = email;
+    }
+    
     //Métodos Get e Set
     public String getNome() {
         return nome;
@@ -51,7 +62,13 @@ public class Pessoa {
     }
     public void setEmail(String email) {
         this.email = email;
-    }   
-    
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa [nome=" + nome + ", idade=" + idade + ", cidade=" + cidade + ", estado=" + estado + ", bairro="
+                + bairro + ", telefone=" + telefone + ", email=" + email + "]";
+    }
+
     
 }

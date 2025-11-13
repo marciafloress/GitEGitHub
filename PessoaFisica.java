@@ -1,10 +1,19 @@
-public class PessoaFisica extends Pessoa {
-
-    //Veriáveis protegidas devido a herança
+public class PessoaFisica extends Pessoa{
+    
+    //Declaração de Variaveis encapsuladas, protegidas.
     protected long cpf;
     protected long rg;
     protected String nomeMae;
 
+    public PessoaFisica(String nome, int idade, String cidade, String estado, String bairro, long telefone,
+                String email, long cpf, long rg, String nomeMae) {
+            super(nome, idade, cidade, estado, bairro, telefone, email);
+            this.cpf = cpf;
+            this.rg = rg;
+            this.nomeMae = nomeMae;
+    }
+       
+    
     //Métodos Get e Set
     public long getCpf() {
         return cpf;
